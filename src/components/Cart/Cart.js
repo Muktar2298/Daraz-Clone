@@ -3,7 +3,6 @@ import "./Cart.css";
 
 const Cart = (props) => {
   const cart = props.cart;
-  console.log(cart);
 
   //   --Total Product Cost --//
   const totalPrice = cart.reduce(
@@ -41,7 +40,7 @@ const Cart = (props) => {
       <p>Shipping & Handling : ${shippingUpdateCost}</p>
       <p>Total before Tax :$ {totalUpdatePrice}</p>
       <p>Estimated Tax :$ {taxUpdate}</p>
-      <h5 style={{ color: "red" }}>Order Total :${totalOrderPrice}</h5>
+      <h5 style={{ color: "navyBlue" }}>Order Total :${totalOrderPrice}</h5>
       <button className="cart-btn">Review Your Order</button>
     </div>
   );
