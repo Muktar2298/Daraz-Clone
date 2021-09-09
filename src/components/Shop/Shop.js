@@ -16,13 +16,19 @@ const Shop = () => {
   const handleAddToCart = (product) => {
     const newCart = [...cart, product];
     setCart(newCart);
+    
   };
   return (
     <div className="shop-container">
       {/* --Product Container -- */}
       <div className="product-container">
         {products.map((pd) => (
-          <Product product={pd} handleAddToCart={handleAddToCart}></Product>
+          <Product
+            product={pd}
+            key={pd.key}
+            handleAddToCart={handleAddToCart}
+            showAddToCartBtn={true}
+          ></Product>
         ))}
       </div>
 

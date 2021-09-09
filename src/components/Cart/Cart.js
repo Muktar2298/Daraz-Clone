@@ -1,4 +1,5 @@
 import React from "react";
+import { useHistory } from "react-router";
 import "./Cart.css";
 
 const Cart = (props) => {
@@ -32,6 +33,10 @@ const Cart = (props) => {
   // --Total Price ---//
   const orderPrice = totalPrice + tax;
   const totalOrderPrice = orderPrice.toFixed(2);
+  const history = useHistory();
+  const handleReview = (e) => {
+    history.push("/review");
+  };
 
   return (
     <div className="product-cart">
@@ -41,7 +46,9 @@ const Cart = (props) => {
       <p>Total before Tax :$ {totalUpdatePrice}</p>
       <p>Estimated Tax :$ {taxUpdate}</p>
       <h5 style={{ color: "navyBlue" }}>Order Total :${totalOrderPrice}</h5>
-      <button className="cart-btn">Review Your Order</button>
+      <button className="cart-btn" onClick={handleReview}>
+        Review Your Order
+      </button>
     </div>
   );
 };
