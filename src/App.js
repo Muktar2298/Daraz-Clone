@@ -7,6 +7,8 @@ import NotFound from "./components/NotFound/NotFound";
 // --React Router Dom Import --//
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import ProductDetails from "./components/ProductDetails/ProductDetails";
+import Shipment from "./components/Shipment/Shipment";
+import Login from "./components/Login/Login";
 
 function App() {
   return (
@@ -18,6 +20,8 @@ function App() {
           <Route exact path="/review" component={Review} />
           <Route exact path="/manage" component={Inventory} />
           <Route exact path="/product/:productKey" component={ProductDetails} />
+          <Route exact path="/shipment" component={Shipment} />
+          <Route exact path="/login" component={Login} />
           <Route exact path="*" component={NotFound} />
         </Switch>
       </Router>

@@ -49,6 +49,8 @@ const Cart = (props) => {
       <button className="cart-btn" onClick={handleReview}>
         Review Your Order
       </button>
+      <br /><br />
+     
     </div>
   );
 };
