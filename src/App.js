@@ -21,8 +21,6 @@ function App() {
     <UserContext.Provider value={[userLoggedIn, setUserLoggedIn]}>
       <div className="App">
         <Router>
-          <p>email:{userLoggedIn.email}</p>
-          <p>Password:{userLoggedIn.password}</p>
           <Header />
           <Switch>
             <Route exact path="/" component={Shop} />

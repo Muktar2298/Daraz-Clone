@@ -15,7 +15,6 @@ const app = initializeApp(firebaseConfig);
 
 const LoginForm = () => {
   const [newUser, setNewUser] = useState(false);
-
   const [user, setUser] = useState({
     name: "",
     email: "",
