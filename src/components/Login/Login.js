@@ -57,29 +57,37 @@ const Login = () => {
       });
   };
   return (
-    <div style={{ marginTop: "5%" }}>
-      {user.isLoggedIn && (
-        <div>
-          <img
-            src={user.photoURL}
-            alt="avatar"
-            style={{ width: "200px", height: "200px", borderRadius: "50%" }}
-          />
-          <p>{user.name}</p>
-          <p>{user.email}</p>
-        </div>
-      )}
-      {/* --GoogleSign-- */}
-      {user.isLoggedIn ? (
-        <button type="button" onClick={googleSignOut}>
-          Google Sign Out
-        </button>
-      ) : (
-        <button type="button" onClick={googleSignIn}>
-          Google Sign In
-        </button>
-      )}
-    </div>
+    <>
+      {/* --Google Sign  Start-- */}
+      <div style={{ marginTop: "5%" }}>
+        {user.isLoggedIn && (
+          <div>
+            <img
+              src={user.photoURL}
+              alt="avatar"
+              style={{ width: "200px", height: "200px", borderRadius: "50%" }}
+            />
+            <p>{user.name}</p>
+            <p>{user.email}</p>
+          </div>
+        )}
+        {/* --GoogleSign-- */}
+        {user.isLoggedIn ? (
+          <button type="button" onClick={googleSignOut}>
+            Google Sign Out
+          </button>
+        ) : (
+          <button type="button" onClick={googleSignIn}>
+            Google Sign In
+          </button>
+        )}
+      </div>
+      {/* --Google Sign End-- */}
+
+      {/* --Login Form Start-- */}
+      <div></div>
+      {/* --Login Form End-- */}
+    </>
   );
 };
 
