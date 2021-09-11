@@ -106,11 +106,11 @@ const LoginForm = () => {
   return (
     <div>
       <Login />
-      <h1>Our Own Authentication </h1>
       <input
         type="checkbox"
         name="newUser"
         onChange={() => setNewUser(!newUser)}
+        style={{width:'3%',padding:"0", marginTop:"2%",marginBottom:"0%"}}
       />
       <label htmlFor="newUser"> Sign Up</label>
       <form onSubmit={handleSubmit}>

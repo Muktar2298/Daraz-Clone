@@ -12,6 +12,7 @@ import Login from "./components/Login/Login";
 import LoginForm from "./components/Login/LoginForm";
 import { createContext, useState } from "react";
 import PrivateRoute from "./components/PrivateRoute/PrivateRoute";
+import ConfirmationsMessage from "./components/ConfirmationMessage/ConfirmationsMessage";
 export const UserContext = createContext();
 
 function App() {
@@ -38,6 +39,9 @@ function App() {
             </PrivateRoute>
             <Route exact path="/login" component={Login} />
             <Route expat path="/loginform" component={LoginForm} />
+            <PrivateRoute path="/confirmationmessage">
+              <ConfirmationsMessage />
+            </PrivateRoute>
             <Route exact path="*" component={NotFound} />
           </Switch>
         </Router>
